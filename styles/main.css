@@ -14,6 +14,7 @@ body{
 --text-color: var(--black);
 --bg-color: var(--white);
 
+  font-size:1.4rem;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -21,15 +22,10 @@ body{
   background-color: var(--bg-color);
 }
 
-@mdeia (prefers-color-scheme: dark) {
-  body{
-    --text-color: var(--white);
-    --bg-color: var(--black);
-  }
-
+/*기본 스타일*/
+html{
+  font-size: 0.625em;
 }
-
-
 
 /*레이아웃 - 페이지베이스*/
 .header, .visual, .main, .slogan, .footer-inner{
@@ -46,8 +42,11 @@ body{
   padding: 0 15px;
 }
 .group{
+  font-size: 150%;
   float:left;
   margin: 0 15px;
+  border: 1px solid blue;
+  padding: 1em;
 }
 .group1{
   background-color: lime;
@@ -61,6 +60,13 @@ body{
   background-color: blueviolet;
   width:190px;
 }
+
+/* 헤더 */
+.header{
+  height: 10vh;
+}
+
+
 
 /*슬로건*/
 .slogan{
