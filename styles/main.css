@@ -34,7 +34,7 @@ body{
 /*레이아웃 - 페이지베이스*/
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
-  padding: 0 30px;
+  padding: 0px;
   margin: 0 auto;
 }
 /*컴포넌트 베이스, 컴포넌트로 사용할때 변수가 유용함*/
@@ -42,11 +42,17 @@ body{
 /*메인콘텐츠*/
 .main{
   background-color: salmon;
-  font-size: 0;
+  /*flex container*/
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; 아래 한번에 쓰는 */
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 .group{
-  display: inline-block;
-  font-size: 16px;
+  /*flex item*/
+  display: block;
+  flex-shrink: 0;
 }
 .group1{
   background-color: lime;
