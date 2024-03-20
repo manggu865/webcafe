@@ -10,6 +10,9 @@
   --gray100: #eee;
   --gray200: #ccc;
   --gray300: #aaa;
+ 
+  --orange100: #e88522;
+  --orange200: #ed552f;
 
   --container-size: 940px;
   --spacing-lg: 30px;
@@ -65,6 +68,7 @@ a{
 .header{
   background-color: var(--white);
   position: relative;
+  border-radius: 0 0 15px 15px/ 00 30px 30px;
 }
 
 /*건너뛰기 링크(접근성에 필요함)*/
@@ -97,7 +101,7 @@ a{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    transform: 0 -100%;
+    translate: 0 -100%;
 
     &:focus-within{
       translate: 0 0; 
@@ -153,9 +157,91 @@ a{
 }
 
 
-
-
 /*메인 메뉴*/
+.navigation{
+  padding-bottom: 30px;
+}
+
+.menu{
+  display: flow-root;
+  background-color: var(--orange200);
+  background-image: linear-gradient(var(--orange100) 0%, var(--orange200) 35%, var(--orange200) 70%, var(--orange100) 100%);
+  border-top: 2px solid var(--black);
+  padding-left: 237px;
+  
+  .menu-item{
+    position: relative;
+    float: left;
+    border-left: 2px solid var(--white);
+
+    button{
+      cursor: pointer;
+      border: 0;
+      background: none;
+      padding: 17px 20px;
+      color: var(--white);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 0px var(--black), -1px -1px 0px var(--black);
+    }
+
+    ul{
+      white-space: nowrap;
+      position: absolute;
+      bottom: -20px;
+      display: none;
+
+      li{ 
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+    .menu-html, .menu-css, .menu-standards{
+      left: 0;
+    }
+    .menu-accessibility, .menu-qna, .menu-archive{
+      right: 0;
+
+    }
+
+  }
+
+  .menu-item.is-active{
+
+    button{
+      color: #ff0;
+      &::after{
+        content:"";
+        display: block;
+        border-top: 3px solid black;
+        position: absolute;
+        bottom: -2px;
+        width: calc(100% - 40px);
+      }
+    }
+
+    ul{
+      display: block;
+    }
+  }
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.navigation{
+}
+
 
 /*비주얼*/
 
