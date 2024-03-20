@@ -64,10 +64,26 @@ a{
 /* 헤더 */
 .header{
   background-color: var(--white);
+  height: 120px;
+  position: relative;
 }
 
 /*로고*/
+.logo{
+  background-color: orange;
+  line-height: 1;
+  position: absolute;
+  top: 45px;
+  left: 65px;
 
+  a{
+    display: block;
+    
+    img{
+      vertical-align: top; /*block에는 사용 못함. 인라인에서만 가능*/
+    }
+  }
+}
 
 
 /*안내 링크*/
