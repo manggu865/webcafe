@@ -64,13 +64,53 @@ a{
 /* 헤더 */
 .header{
   background-color: var(--white);
-  height: 120px;
   position: relative;
 }
 
+/*건너뛰기 링크(접근성에 필요함)*/
+/*.skip-nav{
+  a{
+    position: absolute;
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    background-color: var(--bg-color);
+    color: var(--white);
+    z-index: 10;
+    text-align: center;
+    transform: translateY(-100%); /*브라우저 밖으로 숨김 
+  }
+  
+  a:focus{
+    transform: none; /*포커스하면 생기게 
+  }
+  */
+
+  .skip-nav{
+    background: #000;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    transform: 0 -100%;
+
+    &:focus-within{
+      translate: 0 0; 
+    }
+
+    a{
+      padding: 8px;
+    }
+  }
+ 
+
 /*로고*/
 .logo{
-  background-color: orange;
   line-height: 1;
   position: absolute;
   top: 45px;
