@@ -418,6 +418,35 @@ a{
   
 }
 
+/*유효성 검사 배너*/
+.validation-list{
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 10px;
+  margin-bottom: 20px;
+
+  li{
+    width: 100%;
+  }
+
+    a{
+      padding-left: 40px;
+      display: block;
+      border: 1px solid var(--gray300);
+      border-radius: 30px;
+      /* padding: 8px 0; */
+      /* height: 30px; height로 중앙정렬 주는방법 
+      line-height: 30px; */
+      /* flex로 중앙정렬 주는방법*/
+      display: flex;
+      height: 30px;
+      flex-flow: row nowrap;
+      align-items: center;
+      /* // flex로 중앙정렬 주는방법*/
+      background: url(./../assets/bg/validation_icon.png) no-repeat 15px 50%,
+      linear-gradient(var(--gray200), var(--gray100));
+    }
+  }
 
 /* 슬로건 */
 .slogan{
