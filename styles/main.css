@@ -678,9 +678,69 @@ a{
   }
 }
 
+/*신규 이벤트 및 관련 사이트*/
+.gradient-effect{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: #ccc linear-gradient(#ccc, #eee);
+
+  [class*="-title"] /*타이틀로 끝나는 경우만 선택하라는 뜻*/{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .accent-color{
+    color: var(--orange200);
+  }
+
+}
 
 
+.event{
+  margin: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
+#eventDetail{
+  width: 100%;
+
+  img{
+    box-shadow: 5px 5px 0 0 #aaa;
+    margin-bottom: 10px;
+  }
+
+  em{
+    font-style: normal;
+  }
+}
+
+.event-button-wrapper{
+  --spacing: 4px;
+  --size: 20px;
+  padding: 4px;
+
+  overflow: hidden;
+  
+  button{
+    width: var(--size);
+    height: var(--size);
+    padding: var(--size) 0 0 0;
+    border: 0;
+    background: url(./../assets/bg/back_forward.png) no-repeat;
+    overflow: hidden;
+  }
+
+  .event-button-next{
+    background-position: 100% 0;
+  }
+
+}
+
+.related{
+  margin: 10px;
+}
 
 /* 슬로건 */
 .slogan{
