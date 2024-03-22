@@ -557,6 +557,7 @@ a{
 .board{
   background-color: yellow;
   position: relative;
+  margin-bottom: 20px;
 
   .notice{
     background-color: pink;
@@ -607,6 +608,42 @@ a{
   }
 
   .board-more{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+/*새소식*/
+.news{
+  background-color: pink;
+  position: relative;
+  
+  .news-title{
+    color: var(--orange200);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .news-link{
+    display: block;
+
+    .news-item{
+      position: relative;
+      margin-top: 35px;
+      padding-left: 130px;
+      background-color: skyblue;
+    }
+
+    .news-item-thumbnail{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .news-more{
+    background-color: yellow;
     position: absolute;
     top: 0;
     right: 0;
