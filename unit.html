@@ -5,17 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS 단위</title>
   <style>
-    body{
+    /* body{
       font-size: 20px;
-      /*사이즈가 상속된다*/
+      /*사이즈가 상속된다 
       a{
         font-size: 1.5em;
       }
-      /*em은 상속된 사이즈 x1.5함 / rem은 상속을 받았으나  */
+      /*em은 상속된 사이즈 x1.5함 / rem은 상속을 받았으나   
+    } */
+
+    .button-group{
+      background-color: yellow;
+      display: flex;
+      flex-flow: row nowrap;
+
+      .button-prev, button-next{
+        width: 20px;
+        height: 20px;
+        background: url(./assets/bg/backpage_forwardpage.png);
+        padding-top: 20px;
+        overflow: hidden;
+      }
     }
+
+    .button-next{
+      background-position: ;
+    }
+    
   </style>
 </head>
 <body>
+  <div class="button-group">
+    <span class="button-prev">이전 항목보기</span>
+    <span class="button-next">다음 항목보기</span>
+  </div>
+
   <div>
     <ul>
       <li>
